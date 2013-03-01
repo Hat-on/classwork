@@ -7,7 +7,7 @@ int main()
 {
 int first_argument;
 int second_argument;
-operator sign;
+string sign;
 cout << "Enter first argument: ";
 cin >> first_argument;
 cout << "Enter operation:";
@@ -15,16 +15,24 @@ cin >> sign;
 cout << "Enter second argument: ";
 cin >> second_argument;
 
-if (sign == *) // I really don't understand why my IDE wont get through this line.
+if ( sign == "*" )
 {
-    cout << first_argument << " * " << second_argument << " = " <<
+      cout << first_argument << " * " << second_argument << " = " <<
 first_argument * second_argument << endl;
 }
-
-/*cout << first_argument << " + " << second_argument << " = " <<
+else if ( sign == "+" )
+{
+    cout << first_argument << " + " << second_argument << " = " <<
 first_argument + second_argument << endl;
-cout << first_argument << " / " << second_argument << " = " <<
+}
+else if ( sign == "/" )
+{
+    cout << first_argument << " / " << second_argument << " = " <<
 first_argument / second_argument << endl;
-cout << first_argument << " - " << second_argument << " = " <<
-first_argument - second_argument << endl; */
+}
+else
+{
+    cout << first_argument << " - " << second_argument << " = " <<
+first_argument - second_argument << endl;
+}
 }
