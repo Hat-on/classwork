@@ -1,26 +1,44 @@
 #include <iostream>
 using namespace std;
 
+double addition(double Array_test[], int length);
+
 int main()
 {
-    double Array_test[6]={4,5,10,13,22,99};
-    double j,k,l,m,total;
+    double a,b,c,d,e,f,g;
 
-    for (int i = 0; i < 6; i++)
+    cout << "Enter first number " << endl;
+    cin >> a;
+    cout << "Enter second number " << endl;
+    cin >> b;
+    cout << "Enter third number " << endl;
+    cin >> c;
+    cout << "Enter fourth number " << endl;
+    cin >> d;
+    cout << "Enter fifth number " << endl;
+    cin >> e;
+    cout << "Enter sixth number " << endl;
+    cin >> f;
+    cout << "Enter seventh number " << endl;
+    cin >> g;
+
+    double Array_test[7]={a,b,c,d,e,f,g};
+    for (int i = 0; i < 7; i++)
     {
-        cout << Array_test[i] << " " << endl;
+        cout << Array_test[i] << " ";
     }
-    cout << Array_test[0] << " + " << Array_test[1] << " = " << Array_test[0] + Array_test[1] << endl;
-    j = Array_test[0] + Array_test[1];
-    cout << j << " + " << Array_test[2] << " = " << j + Array_test[2] << endl;
-    k = j + Array_test[2];
-    cout << k << " + " << Array_test[3] << " = " << k + Array_test[3] << endl;
-    l = k + Array_test[3];
-    cout << l << " + " << Array_test[4] << " = " << l + Array_test[4] << endl;
-    m = l + Array_test[4];
-    cout << m << " + " << Array_test[5] << " = " << m + Array_test[5] << endl;
-    total = m + Array_test[5];
-    cout << "The sum of the array is " << total << endl;
-
+    double sum = addition(Array_test, 7);
+    cout << "The sum of the array is " << sum << endl;
     return 0;
+}
+
+double addition(double Array_test[], int length)
+{
+    double sum = 0;
+    for(int i = 0; i < length; i++)
+    {
+        sum += Array_test[i];
+    }
+
+    return sum;
 }
